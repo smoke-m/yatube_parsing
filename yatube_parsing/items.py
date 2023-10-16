@@ -7,6 +7,12 @@ import scrapy
 
 
 class YatubeParsingItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+    author = scrapy.Field()
+    text = scrapy.Field()
+    date = scrapy.Field()
+
+
+class GroupParsingItem(scrapy.Item):
+    group_name = scrapy.Field()
+    description = scrapy.Field()
+    posts_count = scrapy.Field()
