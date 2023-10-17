@@ -15,8 +15,8 @@ class YatubeSpider(scrapy.Spider):
             ).strip()
             data = {
                 'author': quote.css('strong::text').get(),
-                'text': text,
                 'date': quote.css('small::text').get(),
+                'text': text,
             }
             yield YatubeParsingItem(data)
 
